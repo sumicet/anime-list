@@ -309,6 +309,14 @@
     "@chakra-ui/react-context" "2.0.3"
     "@chakra-ui/shared-utils" "2.0.1"
 
+"@chakra-ui/media-query@^3.2.5":
+  "integrity" "sha512-V+Dngi/r7u/uj7JhsZerM1RI597Oo4wED2ojNfclnnEVb/IoqktiuFy6RQgbo3HmE7M/E5B1i4yYzt7tQJhXlg=="
+  "resolved" "https://registry.npmjs.org/@chakra-ui/media-query/-/media-query-3.2.5.tgz"
+  "version" "3.2.5"
+  dependencies:
+    "@chakra-ui/breakpoint-utils" "2.0.3"
+    "@chakra-ui/react-env" "2.0.9"
+
 "@chakra-ui/object-utils@2.0.3":
   "integrity" "sha512-36prckrqTynVD/JTzyCr8OCWVOrMs/awZo3djVbIiNxRIcJ5iEwUVy26h3MWN4ENSopipBtxNfAwPNTLU5Si/g=="
   "resolved" "https://registry.npmjs.org/@chakra-ui/object-utils/-/object-utils-2.0.3.tgz"

@@ -1,14 +1,17 @@
 import { useColorModeValue } from '@chakra-ui/color-mode';
 import { Center, Divider, HStack, Text, VStack } from '@chakra-ui/layout';
 import { Input } from '@chakra-ui/input';
+import { useBreakpointValue } from '@chakra-ui/media-query';
 import { CenterContainer } from './CenterContainer';
 import { Icon } from '../Icons';
+import { Format, getToday } from '../../utils';
 
 export function NavBar() {
     const primaryColor = useColorModeValue('text.primary.light', 'text.primary.dark');
     const dividerColor = useColorModeValue('divider.light', 'divider.dark');
     const iconColor = useColorModeValue('text.placeholder.light', 'text.placeholder.dark');
     const inputBgColor = useColorModeValue('secondary.light', 'secondary.dark');
+    const dateFormat = useBreakpointValue({ base: 'short', md: 'long' });
 
     return (
         <VStack spacing={0} width="100%">
@@ -29,6 +32,9 @@ export function NavBar() {
                             width="100%"
                         />
                     </HStack>
+                    <Text variant="small500" whiteSpace="nowrap">
+                        {getToday(dateFormat as Format)}
+                    </Text>
                 </HStack>
             </CenterContainer>
             <Divider orientation="horizontal" height={1} bgColor={dividerColor} width="100%" />
