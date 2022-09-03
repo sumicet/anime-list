@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tools
 
-## Getting Started
+-   [`OpenApi TypeScript Code Generator`](https://www.npmjs.com/package/openapi-typescript-codegen)
 
-First, run the development server:
+-   [`Chakra-UI`](https://chakra-ui.com/getting-started) because it provides headless
+    components which are like building blocks and make styling fast and easy. It's
+    modular. It makes it easy to work with responsive styles. It provides dark/white
+    theme support.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+-   [`AsyncSelect` from
+    `chakra-react-select`](https://www.npmjs.com/package/chakra-react-select) for
+    the select component. The only 2 components Chakra-UI is missing are `Select` and
+    `DatePicker`. The [`Select` component](https://github.com/chakra-ui/chakra-ui/pull/6241)
+    is in progress and will most likely be released soon.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   [`Redux Toolkit`](https://redux-toolkit.js.org/introduction/getting-started)
+    because it's focused on data fetching and it provides a lot of features such as
+    caching, skipping queries, etc. Read how it compares to other tools
+    [here](https://redux-toolkit.js.org/rtk-query/comparison).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+-   `Eslint` & `Prettier` + `Husky`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# Notes
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   I have some unanswered questions about the designs. Normally, I'd ask before
+    implementing it, but in this case I thought it was better to go with my
+    assumptions. I've added comments for these situations. See `FIGMA`
