@@ -13,11 +13,6 @@
     `DatePicker`. The [`Select` component](https://github.com/chakra-ui/chakra-ui/pull/6241)
     is in progress and will most likely be released soon.
 
--   [`Redux Toolkit`](https://redux-toolkit.js.org/introduction/getting-started)
-    because it's focused on data fetching and it provides a lot of features such as
-    caching, skipping queries, etc. Read how it compares to other tools
-    [here](https://redux-toolkit.js.org/rtk-query/comparison).
-
 -   `Eslint` & `Prettier` + `Husky`
 
 # Notes

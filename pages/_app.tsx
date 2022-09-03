@@ -4,7 +4,7 @@ import { ChakraProvider } from '@chakra-ui/provider';
 import { theme } from '../theme';
 import { Layout } from '../components';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
     return (
         <ChakraProvider theme={theme}>
             <Layout>
@@ -14,4 +14,4 @@ function MyApp({ Component, pageProps }: AppProps) {
     );
 }
 
-export default MyApp;
+export default App;

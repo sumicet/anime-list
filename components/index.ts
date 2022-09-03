@@ -1,3 +1,4 @@
 export * from './Layout/Layout';
 export * from './AnimeCard';
-export * from './Icons/Icon';
+export * from './Icons';
+export * from './Pages';
