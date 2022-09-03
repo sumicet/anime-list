@@ -2,4 +2,5 @@ build
 coverage
 /node_modules
 /public
-/src/store/generated
+/store/generated
+package-lock.json

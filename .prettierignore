@@ -1,8 +1,9 @@
 # Ignore artifacts:
 build
 coverage
-/node_modules
-/public
-/src/store/generated
-/.next
-/.husky
+node_modules
+public
+store/generated
+.next
+.husky
+package-lock.json

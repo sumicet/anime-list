@@ -8,7 +8,8 @@
         "start": "next start",
         "lint": "next lint",
         "prepare": "husky install",
-        "prettier": "npx prettier --write ."
+        "prettier": "npx prettier --write .",
+        "openapi": "openapi --input https://raw.githubusercontent.com/jikan-me/jikan-rest/master/storage/api-docs/api-docs.json --output ./store/generated --exportServices false"
     },
     "dependencies": {
         "eslint-config-airbnb": "^19.0.4",
@@ -27,6 +28,7 @@
         "eslint-config-next": "12.2.5",
         "eslint-plugin-react": "^7.31.4",
         "husky": "^8.0.1",
+        "openapi-typescript-codegen": "^0.23.0",
         "prettier": "2.7.1",
         "typescript": "4.8.2"
     }
