@@ -1,6 +1,8 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
+import { ColorModeScript } from '@chakra-ui/color-mode';
+import { theme } from '../theme';
 
-class MyDocument extends Document {
+class Document extends NextDocument {
     render() {
         return (
             <Html>
@@ -11,6 +13,8 @@ class MyDocument extends Document {
                     />
                 </Head>
                 <body>
+                    {/* Sync local storage correctly https://chakra-ui.com/getting-started/nextjs-guide#color-mode-script */}
+                    <ColorModeScript initialColorMode={theme.config.initialColorMode} />
                     <Main />
                     <NextScript />
                 </body>
@@ -19,4 +23,4 @@ class MyDocument extends Document {
     }
 }
 
-export default MyDocument;
+export default Document;

@@ -33,7 +33,9 @@
                 "tsx": "never"
             }
         ],
-        "import/no-cycle": 0
+        "import/no-cycle": 0,
+        "camelcase": "warn",
+        "react/no-unknown-property": "warn"
     },
     "settings": {
         "import/resolver": {
