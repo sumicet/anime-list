@@ -1,8 +1,9 @@
 import { IconProps } from '@chakra-ui/icon';
-import { SearchIcon } from './components';
+import { CloseIcon, SearchIcon } from './components';
 
 const icons = {
     search: SearchIcon,
+    close: CloseIcon,
 };
 
 /**

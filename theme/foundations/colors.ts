@@ -30,7 +30,8 @@ export const colors = {
             dark: 'rgb(69, 69, 69)',
         },
         placeholderSearch: {
-            light: 'rgba(180, 180, 180, 1)',
+            light: 'rgb(180, 180, 180)',
+            dark: 'rgb(75, 75, 75)',
         },
         // The search result small text
         label: {

@@ -6,9 +6,6 @@ export const Input: ComponentStyleConfig = {
         field: {
             background: mode('secondary.light', 'secondary.dark')(props),
             borderRadius: 'radius30',
-            textStyle: 'small',
-            paddingY: 'space8',
-            paddingX: 'space16',
             color: mode('text.primary.light', 'text.primary.dark')(props),
             _focusVisible: {
                 outline: '0px',
@@ -19,4 +16,37 @@ export const Input: ComponentStyleConfig = {
             },
         },
     }),
+    variants: {
+        clear: (props) => ({
+            field: {
+                background: mode('main.light', 'main.dark')(props),
+                _placeholder: {
+                    color: mode(
+                        'text.placeholderSearch.light',
+                        'text.placeholderSearch.dark'
+                    )(props),
+                },
+            },
+        }),
+    },
+    sizes: {
+        small: {
+            field: {
+                textStyle: 'small',
+                paddingY: 'space8',
+                paddingX: 'space16',
+            },
+        },
+        large: {
+            field: {
+                paddingY: 'space24',
+                paddingX: 'space35',
+                width: '100%',
+                textStyle: 'body500',
+            },
+        },
+    },
+    defaultProps: {
+        size: 'small',
+    },
 };
