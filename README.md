@@ -13,6 +13,10 @@
     `DatePicker`. The [`Select` component](https://github.com/chakra-ui/chakra-ui/pull/6241)
     is in progress and will most likely be released soon.
 
+-   [SWR](https://swr.vercel.app/) because it's faster to setup & the bundle
+    size is smaller. Don't need any complex configurations for the data fetching
+    so this package is good for small projects. 
+
 -   `Eslint` & `Prettier` + `Husky`
 
 # Notes

@@ -7,7 +7,7 @@ import { Anime, Pagination } from '../../store';
 
 interface HomeProps {
     data: Anime[];
-    pagination: Pagination['pagination'];
+    pagination: Pagination;
 }
 
 function Home(props: HomeProps) {
@@ -29,7 +29,7 @@ function Home(props: HomeProps) {
                             key={anime.mal_id}
                             image={anime.images?.webp?.large_image_url || ''}
                             // @ts-ignore The type for `titles` is wrong
-                            title={anime.titles[0]?.title}
+                            title={anime.titles?.[0]?.title}
                         />
                     ))}
                 </SimpleGrid>

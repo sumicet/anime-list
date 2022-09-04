@@ -12,6 +12,7 @@ export const Modal: ComponentStyleConfig = {
             display: 'flex',
             justifyContent: 'center',
         },
+        // Can also style the following
         // dialog: {},
         // body: {},
     }),

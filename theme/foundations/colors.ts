@@ -35,8 +35,8 @@ export const colors = {
         },
         // The search result small text
         label: {
-            light: 'rgba(117, 117, 117, 1)',
-            dark: '',
+            light: 'rgb(117, 117, 117)',
+            dark: 'rgb(138, 138, 138)',
         },
     },
     divider: {

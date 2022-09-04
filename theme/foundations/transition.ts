@@ -1,7 +1,3 @@
-// const transitionProperty = {
-//     common: 'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform',
-// };
-
 const transitionTimingFunction = {
     'ease-in': 'cubic-bezier(0.4, 0, 1, 1)',
     'ease-out': 'cubic-bezier(0, 0, 0.2, 1)',
@@ -17,6 +13,7 @@ const transitionDuration = {
 
 // Write each property separately when styling
 export const transition = {
+    // Can also define a `property` like below
     // property: transitionProperty,
     easing: transitionTimingFunction,
     duration: transitionDuration,

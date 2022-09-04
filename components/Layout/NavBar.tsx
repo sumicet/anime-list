@@ -6,7 +6,7 @@ import { useDisclosure } from '@chakra-ui/hooks';
 import { CenterContainer } from './CenterContainer';
 import { Icon } from '../Icons';
 import { Format, getToday } from '../../utils';
-import { SearchModal } from './SearchModal';
+import { SearchModal } from '../SearchModal/SearchModal';
 
 export function NavBar() {
     const primaryColor = useColorModeValue('text.primary.light', 'text.primary.dark');
