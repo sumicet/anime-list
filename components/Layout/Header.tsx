@@ -10,7 +10,7 @@ import { Icon } from '../Icons';
 import { Format, getToday } from '../../utils';
 import { SearchModal } from '../SearchModal/SearchModal';
 
-export function NavBar() {
+export function Header() {
     const bgColor = useColorModeValue('main.light', 'main.dark');
     const primaryColor = useColorModeValue('text.primary.light', 'text.primary.dark');
     const dividerColor = useColorModeValue('divider.light', 'divider.dark');

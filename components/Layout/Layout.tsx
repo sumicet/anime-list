@@ -2,7 +2,7 @@ import { useColorModeValue } from '@chakra-ui/color-mode';
 import { Box, VStack } from '@chakra-ui/layout';
 import { ReactNode } from 'react';
 import { CenterContainer } from './CenterContainer';
-import { NavBar } from './NavBar';
+import { Header } from './Header';
 
 function Footer() {
     return <Box>Footer</Box>;
@@ -19,7 +19,7 @@ export function Layout({ children }: { children: ReactNode }) {
             height="100%"
             position="relative"
         >
-            <NavBar />
+            <Header />
             <CenterContainer>{children}</CenterContainer>
             <Footer />
         </VStack>
