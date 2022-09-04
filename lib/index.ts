@@ -1,2 +1,2 @@
-export * from './loadAnimes';
+export * from './loadAllAnime';
 export * from './loadAnime';

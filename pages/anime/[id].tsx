@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { GetStaticProps } from 'next';
 import { useColorModeValue } from '@chakra-ui/color-mode';
-import { loadAnime, loadAnimes } from '../../lib';
+import { loadAnime, loadAllAnime } from '../../lib';
 import { Anime } from '../../store';
 import { Icon, Metadata, Statistics } from '../../components';
 
@@ -104,7 +104,7 @@ function AnimePage({ data }: { data: Anime }) {
 }
 
 export const getStaticPaths = async () => {
-    const results = await loadAnimes(0, 100);
+    const results = await loadAllAnime(0, 100);
     return {
         paths: results?.data?.map((anime: Anime) => ({
             params: { id: anime?.mal_id?.toString() },

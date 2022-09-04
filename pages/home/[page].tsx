@@ -2,7 +2,7 @@ import { SimpleGrid, VStack } from '@chakra-ui/layout';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import { AnimeCard, Pagination } from '../../components';
-import { loadAnimes } from '../../lib';
+import { loadAllAnime } from '../../lib';
 import { Anime, Pagination as PaginationType } from '../../store';
 
 interface HomeProps {
@@ -16,7 +16,7 @@ function Home(props: HomeProps) {
         <>
             <Head>
                 <title>Anime List</title>
-                <meta name="description" content="A list of animes" />
+                <meta name="description" content="A list of anime" />
             </Head>
             <VStack spacing="space40" width="100%">
                 <SimpleGrid
@@ -41,7 +41,7 @@ function Home(props: HomeProps) {
 }
 
 export const getStaticPaths = async () => {
-    const results = await loadAnimes('1');
+    const results = await loadAllAnime('1');
     return {
         paths: [...Array(results.pagination.last_visible_page)].map((_, index) => ({
             params: { page: (index + 1).toString() },
@@ -50,9 +50,9 @@ export const getStaticPaths = async () => {
     };
 };
 
-// Because the api is rate limited, not all pages will be rendered at build time
+// Keep in mind that the api is rate limited
 export const getStaticProps: GetStaticProps = async (context) => {
-    const results = await loadAnimes((context.params?.page as string) || '1');
+    const results = await loadAllAnime((context.params?.page as string) || '1');
 
     return {
         props: {
