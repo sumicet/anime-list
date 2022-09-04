@@ -16,11 +16,14 @@ function AnimePage({ data }: { data: Anime }) {
         return <Box />;
     }
 
+    // @ts-ignore The type for `titles` is wrong
+    const title = data.titles?.[0]?.title;
+
     return (
         <>
             <Head>
-                <title>Anime</title>
-                <meta name="description" content="A list of animes" />
+                <title>{title}</title>
+                <meta name="description" content={data?.synopsis || undefined} />
             </Head>
             <VStack spacing="space35" width="100%" alignItems="flex-start">
                 <Stack direction={{ base: 'column', sm: 'row' }} spacing="space20" width="100%">
@@ -36,7 +39,7 @@ function AnimePage({ data }: { data: Anime }) {
                             layout="fill"
                             objectFit="cover"
                             // @ts-ignore The type for `titles` is wrong
-                            alt={data.titles?.[0]?.title}
+                            alt={title}
                         />
                     </Box>
                     <Stack
@@ -48,8 +51,7 @@ function AnimePage({ data }: { data: Anime }) {
                     >
                         <HStack spacing="space10" width="100%">
                             <Text variant="large700" color={textColor} noOfLines={1}>
-                                {/* @ts-ignore The type for `titles` is wrong */}
-                                {data.titles?.[0]?.title}
+                                {title}
                             </Text>
                             <Icon name="verified" color={bgColor} boxSize="space24" />
                         </HStack>
