@@ -6,7 +6,7 @@
 export const colors = {
     main: {
         light: 'rgba(255, 255, 255, 1)',
-        dark: '#000000',
+        dark: '#272729',
     },
     secondary: {
         light: 'rgba(238, 238, 238, 1)',
@@ -41,7 +41,7 @@ export const colors = {
     },
     divider: {
         light: 'rgb(217, 217, 217)',
-        dark: 'rgb(38, 38, 38)',
+        dark: '#323236',
     },
     overlay: 'rgba(0, 0, 0, 0.6)',
     cardOverlay:

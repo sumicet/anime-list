@@ -9,7 +9,7 @@ body {
     display: table-cell;
 }
 
-#root {
+#__next {
     display: flex;
     height: 100%;
 }

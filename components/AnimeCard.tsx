@@ -25,23 +25,16 @@ export function AnimeCard({ image, title, id }: AnimeCardProps) {
                     transform: 'scale(1.05)',
                 }}
             >
-                <Box padding="space12">
+                <Box padding="space12" zIndex={2}>
                     <Text variant="body600" color="text.primary.dark" noOfLines={1}>
                         {title}
                     </Text>
                 </Box>
 
-                <Box position="absolute" width="100%" height="100%" top={0} zIndex={-1}>
+                <Box position="absolute" width="100%" height="100%" top={0}>
                     <Image src={image} layout="fill" objectFit="cover" />
                 </Box>
-                <Box
-                    position="absolute"
-                    bottom={0}
-                    width="100%"
-                    height="33%"
-                    bg="cardOverlay"
-                    zIndex={-1}
-                />
+                <Box position="absolute" bottom={0} width="100%" height="33%" bg="cardOverlay" />
             </Flex>
         </Link>
     );
