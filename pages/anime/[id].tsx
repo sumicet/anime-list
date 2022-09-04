@@ -37,7 +37,7 @@ function AnimePage({ data }: { data: Anime }) {
             </Head>
             <HStack
                 spacing="space4"
-                paddingBottom="space50"
+                paddingBottom={{ base: 'space24', sm: 'space50' }}
                 onClick={handleGoBack}
                 cursor="pointer"
             >

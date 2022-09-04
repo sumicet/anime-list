@@ -14,7 +14,7 @@ export function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
     return (
         <Modal isOpen={isOpen} onClose={onClose} closeOnOverlayClick preserveScrollBarGap>
             <ModalOverlay />
-            <ModalContent maxWidth={618} top="17.5%">
+            <ModalContent maxWidth={{ base: 'calc(100% - 20px)', sm: 618 }} top="17.5%">
                 <ModalBody>
                     <Flex
                         role="button"
