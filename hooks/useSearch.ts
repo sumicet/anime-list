@@ -8,6 +8,13 @@ export type Input = string | null;
 const fetcher = async (query: Input) =>
     (await fetch(`https://api.jikan.moe/v4/anime?q=${query}&limit=5`)).json();
 
+/**
+ * @returns `input` The input value
+ * @returns `query` The current search query
+ * @returns `data` The search results
+ * @returns `error`
+ * @returns `isLoading`
+ */
 export function useSearch() {
     const [input, setInput] = useState<Input>(null);
     const [query, setQuery] = useState<Input>(null);

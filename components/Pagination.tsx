@@ -4,7 +4,10 @@ import { useColorModeValue } from '@chakra-ui/color-mode';
 import { useRouter } from 'next/router';
 import { Icon } from './Icons';
 
-export function Pages({ hasNext }: { hasNext: boolean }) {
+/**
+ * Enables the user to go back or forth between pages
+ */
+export function Pagination({ hasNext }: { hasNext: boolean }) {
     const primaryColor = useColorModeValue('text.primary.light', 'text.primary.dark');
     const router = useRouter();
 
