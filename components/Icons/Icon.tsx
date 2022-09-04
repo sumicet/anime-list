@@ -1,10 +1,11 @@
 import { IconProps } from '@chakra-ui/icon';
-import { ArrowLeftIcon, CloseIcon, SearchIcon } from './components';
+import { ArrowLeftIcon, CloseIcon, SearchIcon, VerifiedIcon } from './components';
 
 const icons = {
     search: SearchIcon,
     close: CloseIcon,
     arrowLeft: ArrowLeftIcon,
+    verified: VerifiedIcon,
 };
 
 /**

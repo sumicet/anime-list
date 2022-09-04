@@ -3,6 +3,7 @@ import { Box, Center, Divider, HStack, Text } from '@chakra-ui/layout';
 import { Input } from '@chakra-ui/input';
 import { useBreakpointValue } from '@chakra-ui/media-query';
 import { useDisclosure } from '@chakra-ui/hooks';
+import Link from 'next/link';
 import { CenterContainer } from './CenterContainer';
 import { Icon } from '../Icons';
 import { Format, getToday } from '../../utils';
@@ -21,9 +22,11 @@ export function NavBar() {
         <Box width="100%">
             <CenterContainer paddingY="space12">
                 <HStack spacing={{ base: 'space16', sm: 'space40' }}>
-                    <Text variant="large600" color={primaryColor}>
-                        Anime
-                    </Text>
+                    <Link href="/home/1">
+                        <Text variant="large600" color={primaryColor} cursor="pointer">
+                            Anime
+                        </Text>
+                    </Link>
                     <HStack
                         role="button"
                         onClick={onOpen}

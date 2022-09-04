@@ -27,6 +27,7 @@ function Home(props: HomeProps) {
                     {data?.map((anime) => (
                         <AnimeCard
                             key={anime.mal_id}
+                            id={anime.mal_id || ''}
                             image={anime.images?.webp?.large_image_url || ''}
                             // @ts-ignore The type for `titles` is wrong
                             title={anime.titles?.[0]?.title}
