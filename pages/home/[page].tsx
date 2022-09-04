@@ -1,9 +1,9 @@
 import { SimpleGrid, VStack } from '@chakra-ui/layout';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
-import { AnimeCard, Pages } from '../components';
-import { loadAnimes } from '../lib';
-import { Anime, Pagination } from '../store';
+import { AnimeCard, Pages } from '../../components';
+import { loadAnimes } from '../../lib';
+import { Anime, Pagination } from '../../store';
 
 interface HomeProps {
     data: Anime[];
@@ -41,6 +41,13 @@ function Home(props: HomeProps) {
 
 export const getStaticPaths = async () => {
     const results = await loadAnimes('1');
+    if (!results) {
+        return {
+            paths: {
+                params: {},
+            },
+        };
+    }
     return {
         paths: [...Array(results.pagination.last_visible_page)].map((_, index) => ({
             params: { page: (index + 1).toString() },
