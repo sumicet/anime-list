@@ -5,12 +5,12 @@
 
 export const colors = {
     main: {
-        light: 'rgba(255, 255, 255, 1)',
-        dark: '#272729',
+        light: 'rgb(255, 255, 255)',
+        dark: 'rgb(0, 0, 0)',
     },
     secondary: {
         light: 'rgba(238, 238, 238, 1)',
-        dark: '#111111',
+        dark: '#262626',
     },
     text: {
         primary: {

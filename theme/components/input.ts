@@ -23,7 +23,7 @@ export const Input: ComponentStyleConfig = {
     variants: {
         clear: (props) => ({
             field: {
-                background: mode('main.light', 'main.dark')(props),
+                background: mode('main.light', 'divider.dark')(props),
                 _placeholder: {
                     color: mode(
                         'text.placeholderSearch.light',

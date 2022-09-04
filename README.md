@@ -19,6 +19,10 @@
 
 -   `Eslint` & `Prettier` + `Husky`
 
+# Additions
+
+-   Dark theme
+
 # Notes
 
 -   I have some unanswered questions about the designs. Normally, I'd ask before

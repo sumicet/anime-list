@@ -25,7 +25,7 @@ export function Results({
 }) {
     const titleColor = useColorModeValue('text.primary.light', 'text.primary.dark');
     const fadedColor = useColorModeValue('text.label.light', 'text.label.dark');
-    const bgColor = useColorModeValue('main.light', 'main.dark');
+    const bgColor = useColorModeValue('main.light', 'divider.dark');
 
     if (isLoading) {
         return (

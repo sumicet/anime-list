@@ -3,7 +3,7 @@ import { Text, VStack } from '@chakra-ui/layout';
 
 export function Statistics({ label, value }: { label: string; value: string | number }) {
     const textColor = useColorModeValue('text.primary.light', 'text.primary.dark');
-    const fadedTextColor = useColorModeValue('text.placeholder.light', 'text.placeholder.dark');
+    const fadedTextColor = useColorModeValue('text.placeholder.light', 'text.label.dark');
 
     return (
         <VStack spacing={0} alignItems="flex-end">
