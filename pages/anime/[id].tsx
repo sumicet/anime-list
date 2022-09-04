@@ -10,6 +10,12 @@ import { Icon, Metadata, Statistics } from '../../components';
 function AnimePage({ data }: { data: Anime }) {
     const textColor = useColorModeValue('text.primary.light', 'text.primary.dark');
     const bgColor = useColorModeValue('main.light', 'main.dark');
+
+    // TODO: Replace with skeleton
+    if (!data) {
+        return <Box />;
+    }
+
     return (
         <>
             <Head>
@@ -68,7 +74,7 @@ function AnimePage({ data }: { data: Anime }) {
 }
 
 export const getStaticPaths = async () => {
-    const results = await loadAnimes('1', 10000000000000);
+    const results = await loadAnimes(undefined, 100);
     return {
         paths: results?.data?.map((anime: Anime) => ({
             params: { id: anime?.mal_id?.toString() },
