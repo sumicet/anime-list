@@ -49,6 +49,7 @@ export const getStaticPaths = async () => {
     };
 };
 
+// Because the api is rate limited, not all pages will be rendered at build time
 export const getStaticProps: GetStaticProps = async (context) => {
     const results = await loadAnimes((context.params?.page as string) || '1');
 
