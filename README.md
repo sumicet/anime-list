@@ -27,4 +27,7 @@
 
 -   I have some unanswered questions about the designs. Normally, I'd ask before
     implementing it, but in this case I thought it was better to go with my
-    assumptions. I've added comments for these situations. See `FIGMA`
+    assumptions. Some colors are very similar to each other so I picked 1 and
+    used it in both cases eg rgba(235, 235, 235, 1) and rgba(238, 238, 238, 1).
+    Similarly, the spacing system appears to be using a lot of different values
+    so I tried to make it consistent as much as possible.

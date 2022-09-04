@@ -19,4 +19,4 @@ const getSuffix = () => {
 export const getToday = (format?: Format) =>
     format === 'short'
         ? `${getMonth(format)} ${currentDate}${getSuffix()}`
-        : `Today is the ${currentDate}${getSuffix()} of ${getMonth(format)}`;
+        : `${currentDate}${getSuffix()} of ${getMonth(format)}`;

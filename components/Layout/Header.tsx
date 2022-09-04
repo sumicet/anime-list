@@ -50,10 +50,21 @@ export function Header() {
                             width="100%"
                         />
                     </HStack>
-                    <Text variant="small500" whiteSpace="nowrap">
-                        {/* TODO: underline */}
-                        {getToday(dateFormat as Format)}
-                    </Text>
+                    <HStack spacing={0}>
+                        {dateFormat === 'long' && (
+                            <Text variant="small500" whiteSpace="nowrap">
+                                Today is the&nbsp;
+                            </Text>
+                        )}
+                        <Text
+                            variant="small500"
+                            whiteSpace="nowrap"
+                            textDecoration="underline"
+                            textUnderlineOffset={3}
+                        >
+                            {getToday(dateFormat as Format)}
+                        </Text>
+                    </HStack>
                     <Button bg="transparent" paddingRight={0} onClick={toggleColorMode}>
                         <Icon name="theme" boxSize="space24" color={primaryColor} />
                     </Button>

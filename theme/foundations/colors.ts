@@ -1,8 +1,5 @@
 // The dark colors aren't on Figma
 
-// FIGMA: some colors are very similar to others eg rgba(235, 235, 235, 1) and
-// rgba(238, 238, 238, 1), so I picked 1 and used it for both situations
-
 export const colors = {
     main: {
         light: 'rgb(255, 255, 255)',
@@ -19,7 +16,7 @@ export const colors = {
         },
         secondary: {
             light: 'rgba(167, 167, 167, 1)',
-            dark: '',
+            dark: '#828282',
         },
         placeholder: {
             light: 'rgb(186, 186, 186)',

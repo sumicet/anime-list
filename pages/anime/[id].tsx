@@ -1,6 +1,7 @@
 import { Box, Flex, HStack, Stack, Text, VStack } from '@chakra-ui/layout';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { GetStaticProps } from 'next';
 import { useColorModeValue } from '@chakra-ui/color-mode';
 import { loadAnime, loadAnimes } from '../../lib';
@@ -10,14 +11,23 @@ import { Icon, Metadata, Statistics } from '../../components';
 function AnimePage({ data }: { data: Anime }) {
     const textColor = useColorModeValue('text.primary.light', 'text.primary.dark');
     const bgColor = useColorModeValue('main.light', 'main.dark');
+    const router = useRouter();
 
     // TODO: Replace with skeleton
     if (!data) {
         return <Box />;
     }
-
     // @ts-ignore The type for `titles` is wrong
     const title = data.titles?.[0]?.title;
+
+    // Could've added a useHistory hook that memorizes the previous route
+    // Using the hook, we can check if the previously accessed page was one of
+    // the pages inside the Anime List app
+    // If it is => router.back()
+    // Else => router.push('home/1')
+    const handleGoBack = () => {
+        router.push('home/1');
+    };
 
     return (
         <>
@@ -25,6 +35,22 @@ function AnimePage({ data }: { data: Anime }) {
                 <title>{title}</title>
                 <meta name="description" content={data?.synopsis || undefined} />
             </Head>
+            <HStack
+                spacing="space4"
+                paddingBottom="space50"
+                onClick={handleGoBack}
+                cursor="pointer"
+            >
+                <Icon
+                    name="smallArrowRight"
+                    transform="rotate(180deg)"
+                    color={textColor}
+                    boxSize="24px"
+                />
+                <Text variant="body600" color={textColor}>
+                    Go back to Main
+                </Text>
+            </HStack>
             <VStack spacing="space35" width="100%" alignItems="flex-start">
                 <Stack direction={{ base: 'column', sm: 'row' }} spacing="space20" width="100%">
                     <Box
