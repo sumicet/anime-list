@@ -21,10 +21,6 @@ export const colors = {
             light: 'rgba(167, 167, 167, 1)',
             dark: '',
         },
-        subtle: {
-            light: 'rgba(90, 90, 90, 1)',
-            dark: '',
-        },
         placeholder: {
             light: 'rgb(186, 186, 186)',
             dark: '#707070',
@@ -49,8 +45,8 @@ export const colors = {
     accent: {
         green: 'rgba(32, 191, 18, 1)',
         purple: {
-            light: '#e9deff',
-            dark: '#7156a3',
+            light: 'rgba(0, 0, 0, 0.1)',
+            dark: 'rgba(255, 255, 255, 0.1)',
         },
     },
 };

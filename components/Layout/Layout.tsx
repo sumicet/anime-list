@@ -1,12 +1,9 @@
 import { useColorModeValue } from '@chakra-ui/color-mode';
-import { Box, VStack } from '@chakra-ui/layout';
+import { VStack } from '@chakra-ui/layout';
 import { ReactNode } from 'react';
 import { CenterContainer } from './CenterContainer';
+import { Footer } from './Footer';
 import { Header } from './Header';
-
-function Footer() {
-    return <Box>Footer</Box>;
-}
 
 export function Layout({ children }: { children: ReactNode }) {
     const bgColor = useColorModeValue('main.light', 'main.dark');

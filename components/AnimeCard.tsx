@@ -32,7 +32,7 @@ export function AnimeCard({ image, title, id }: AnimeCardProps) {
                 </Box>
 
                 <Box position="absolute" width="100%" height="100%" top={0}>
-                    <Image src={image} layout="fill" objectFit="cover" />
+                    <Image src={image} layout="fill" objectFit="cover" alt={title} />
                 </Box>
                 <Box position="absolute" bottom={0} width="100%" height="33%" bg="cardOverlay" />
             </Flex>

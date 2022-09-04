@@ -106,6 +106,8 @@ export function Results({
                             src={anime.images?.webp?.large_image_url || ''}
                             layout="fill"
                             objectFit="cover"
+                            // @ts-ignore The type for `titles` is wrong
+                            alt={anime.titles?.[0]?.title}
                         />
                     </Box>
                     <VStack spacing={0} alignItems="flex-start" width="100%">

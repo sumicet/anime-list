@@ -16,13 +16,13 @@ export function Pages({ hasNext }: { hasNext: boolean }) {
     return (
         <HStack spacing="space12">
             <Button variant="square" onClick={() => navigate('back')} isDisabled={page === 1}>
-                <Icon name="arrowLeft" />
+                <Icon name="arrowLeft" boxSize={19} />
             </Button>
             <Text variant="body600" color={primaryColor}>
                 {page}
             </Text>
             <Button variant="square" onClick={() => navigate('forward')} isDisabled={!hasNext}>
-                <Icon name="arrowLeft" transform="rotate(180deg)" />
+                <Icon name="arrowLeft" transform="rotate(180deg)" boxSize={19} />
             </Button>
         </HStack>
     );

@@ -5,7 +5,8 @@ import { mode } from '@chakra-ui/theme-tools';
 
 export const Button: ComponentStyleConfig = {
     baseStyle: (props) => ({
-        padding: 'space8',
+        height: 32,
+        width: 32,
         borderRadius: 'radius5',
         _disabled: {
             opacity: 0.5,

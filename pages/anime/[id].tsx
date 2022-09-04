@@ -35,6 +35,8 @@ function AnimePage({ data }: { data: Anime }) {
                             src={data.images?.webp?.large_image_url || ''}
                             layout="fill"
                             objectFit="cover"
+                            // @ts-ignore The type for `titles` is wrong
+                            alt={data.titles?.[0]?.title}
                         />
                     </Box>
                     <Stack
