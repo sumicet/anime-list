@@ -74,7 +74,7 @@ function AnimePage({ data }: { data: Anime }) {
 }
 
 export const getStaticPaths = async () => {
-    const results = await loadAnimes(undefined, 100);
+    const results = await loadAnimes(0, 100);
     return {
         paths: results?.data?.map((anime: Anime) => ({
             params: { id: anime?.mal_id?.toString() },
