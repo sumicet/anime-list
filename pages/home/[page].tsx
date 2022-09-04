@@ -7,7 +7,7 @@ import { Anime, Pagination } from '../../store';
 
 interface HomeProps {
     data: Anime[];
-    pagination: Pagination;
+    pagination: Pagination['pagination'];
 }
 
 function Home(props: HomeProps) {
@@ -33,7 +33,7 @@ function Home(props: HomeProps) {
                         />
                     ))}
                 </SimpleGrid>
-                <Pages page={pagination?.current_page || 1} />
+                <Pages hasNext={pagination?.has_next_page || false} />
             </VStack>
         </>
     );
@@ -41,13 +41,6 @@ function Home(props: HomeProps) {
 
 export const getStaticPaths = async () => {
     const results = await loadAnimes('1');
-    if (!results) {
-        return {
-            paths: {
-                params: {},
-            },
-        };
-    }
     return {
         paths: [...Array(results.pagination.last_visible_page)].map((_, index) => ({
             params: { page: (index + 1).toString() },

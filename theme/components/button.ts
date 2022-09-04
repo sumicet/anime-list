@@ -7,7 +7,10 @@ export const Button: ComponentStyleConfig = {
     baseStyle: (props) => ({
         padding: 'space8',
         borderRadius: 'radius5',
-        _disabled: {},
+        _disabled: {
+            opacity: 0.5,
+            cursor: 'auto',
+        },
         bgColor: mode('secondary.light', 'secondary.dark')(props),
     }),
     variants: {
