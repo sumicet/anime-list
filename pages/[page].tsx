@@ -42,8 +42,8 @@ function Home(props: HomeProps) {
 export const getStaticPaths = async () => {
     const results = await loadAnimes('1');
     return {
-        paths: Array(results.pagination.last_visible_page).map((_, index) => ({
-            params: { page: index },
+        paths: [...Array(results.pagination.last_visible_page)].map((_, index) => ({
+            params: { page: index.toString() },
         })),
         fallback: true,
     };
@@ -55,7 +55,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     return {
         props: {
             ...results,
-            params: context.params?.page,
         },
         revalidate: 6000,
     };
