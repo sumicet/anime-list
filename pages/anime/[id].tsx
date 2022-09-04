@@ -31,7 +31,13 @@ function AnimePage({ data }: { data: Anime }) {
                             objectFit="cover"
                         />
                     </Box>
-                    <Flex direction="column" justifyContent="space-between" height={330} flex={1}>
+                    <Stack
+                        direction="column"
+                        justifyContent="space-between"
+                        height={330}
+                        flex={1}
+                        spacing={{ base: 'space16', sm: '0px' }}
+                    >
                         <HStack spacing="space10" width="100%">
                             <Text variant="large700" color={textColor} noOfLines={1}>
                                 {/* @ts-ignore The type for `titles` is wrong */}
@@ -50,7 +56,7 @@ function AnimePage({ data }: { data: Anime }) {
                             <Statistics label="Rank" value={data.rank || 'Unknown'} />
                             <Statistics label="Popularity" value={data.popularity || 'Unknown'} />
                         </Flex>
-                    </Flex>
+                    </Stack>
                 </Stack>
                 <Text variant="body600" color={textColor}>
                     Description
