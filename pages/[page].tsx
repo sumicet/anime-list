@@ -29,7 +29,7 @@ function Home(props: HomeProps) {
                             key={anime.mal_id}
                             image={anime.images?.webp?.large_image_url || ''}
                             // @ts-ignore The type for `titles` is wrong
-                            title={anime.titles[0].title}
+                            title={anime.titles[0]?.title}
                         />
                     ))}
                 </SimpleGrid>
@@ -43,7 +43,7 @@ export const getStaticPaths = async () => {
     const results = await loadAnimes('1');
     return {
         paths: [...Array(results.pagination.last_visible_page)].map((_, index) => ({
-            params: { page: index.toString() },
+            params: { page: (index + 1).toString() },
         })),
         fallback: true,
     };
