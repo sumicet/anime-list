@@ -57,6 +57,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
             ...results,
             params: context.params?.page,
         },
+        revalidate: 6000,
     };
 };
 

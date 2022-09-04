@@ -17,7 +17,7 @@ export function Pages({ page }: { page: number }) {
                 <Icon name="arrowLeft" />
             </Button>
             <Text variant="body600" color={primaryColor}>
-                {page}aaaa
+                {page}
             </Text>
             <Button variant="square" onClick={() => navigate('forward')}>
                 <Icon name="arrowLeft" transform="rotate(180deg)" />

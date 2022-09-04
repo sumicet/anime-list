@@ -5,6 +5,15 @@ const nextConfig = {
     images: {
         domains: ['cdn.myanimelist.net'],
     },
+    async redirects() {
+        return [
+            {
+                source: '/',
+                destination: '/1',
+                permanent: true,
+            },
+        ];
+    },
 };
 
 module.exports = nextConfig;
