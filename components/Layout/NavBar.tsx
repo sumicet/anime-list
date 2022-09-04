@@ -54,7 +54,7 @@ export function NavBar() {
                         {/* TODO: underline */}
                         {getToday(dateFormat as Format)}
                     </Text>
-                    <Button bg="transparent" onClick={toggleColorMode}>
+                    <Button bg="transparent" paddingRight={0} onClick={toggleColorMode}>
                         <Icon name="theme" boxSize="space24" color={primaryColor} />
                     </Button>
                 </HStack>

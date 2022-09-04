@@ -39,6 +39,7 @@ export function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
                                 error={error}
                                 query={query}
                                 isLoading={isLoading}
+                                onClose={onClose}
                             />
                         )}
                     </VStack>

@@ -1,12 +1,14 @@
 import { Box, BoxProps, Center, HStack, Text, VStack } from '@chakra-ui/layout';
 import { useColorModeValue } from '@chakra-ui/color-mode';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { Spinner } from '@chakra-ui/spinner';
 import { Anime } from '../../store';
 import { Input } from '../../hooks';
+import { Icon } from '../Icons';
 
 function Wrapper(props: BoxProps) {
-    const bgColor = useColorModeValue('main.light', 'main.dark');
+    const bgColor = useColorModeValue('main.light', 'divider.dark');
     return (
         <Box {...props} width="100%" bgColor={bgColor} padding="space35" borderRadius="radius30" />
     );
@@ -17,15 +19,20 @@ export function Results({
     error,
     query,
     isLoading,
+    onClose,
 }: {
     data: Anime[] | undefined;
     error: any;
     query: Input;
     isLoading: boolean;
+    onClose: () => void;
 }) {
     const titleColor = useColorModeValue('text.primary.light', 'text.primary.dark');
     const fadedColor = useColorModeValue('text.label.light', 'text.label.dark');
     const bgColor = useColorModeValue('main.light', 'divider.dark');
+    const accentColor = useColorModeValue('accent.purple.light', 'accent.purple.dark');
+    const iconColor = useColorModeValue('text.placeholder.light', 'text.placeholder.dark');
+    const router = useRouter();
 
     if (isLoading) {
         return (
@@ -57,17 +64,35 @@ export function Results({
         );
     }
 
+    const handleClick = async (id: Anime['mal_id']) => {
+        await router.push(`/anime/${id}`);
+        onClose();
+    };
+
     return (
         <VStack
-            spacing="space24"
+            spacing="space12"
             alignItems="flex-start"
             width="100%"
             bgColor={bgColor}
-            padding="space35"
+            padding="space24"
             borderRadius="radius30"
+            cursor="pointer"
         >
             {data.map((anime) => (
-                <HStack spacing="space16">
+                <HStack
+                    spacing="space16"
+                    borderRadius="radius10"
+                    padding="space12"
+                    width="100%"
+                    transitionProperty="all"
+                    transitionTimingFunction="ease-in-out"
+                    transitionDuration="ultra-fast"
+                    _hover={{
+                        bgColor: accentColor,
+                    }}
+                    onClick={() => handleClick(anime.mal_id)}
+                >
                     <Box
                         borderRadius="radius5"
                         overflow="hidden"
@@ -96,6 +121,7 @@ export function Results({
                             · {anime.status}
                         </Text>
                     </VStack>
+                    <Icon name="smallArrowRight" boxSize="space24" color={iconColor} />
                 </HStack>
             ))}
         </VStack>

@@ -27,11 +27,11 @@ export const colors = {
         },
         placeholder: {
             light: 'rgb(186, 186, 186)',
-            dark: 'rgb(69, 69, 69)',
+            dark: '#707070',
         },
         placeholderSearch: {
             light: 'rgb(180, 180, 180)',
-            dark: 'rgb(75, 75, 75)',
+            dark: '#7a7a7a',
         },
         // The search result small text
         label: {
@@ -48,5 +48,9 @@ export const colors = {
         'linear-gradient(180deg, #D9D9D9 0%, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.69) 100%)',
     accent: {
         green: 'rgba(32, 191, 18, 1)',
+        purple: {
+            light: '#e9deff',
+            dark: '#7156a3',
+        },
     },
 };
