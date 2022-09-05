@@ -23,11 +23,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
     const pagination = results?.pagination;
 
-    // Doesn't return an `error` field
+    // It sometimes doesn't return an `error` field
     if (
-        pagination?.current_page &&
-        pagination?.last_visible_page &&
-        pagination.current_page > pagination?.last_visible_page
+        results?.error ||
+        (pagination?.current_page &&
+            pagination?.last_visible_page &&
+            pagination.current_page > pagination?.last_visible_page)
     ) {
         return {
             notFound: true,

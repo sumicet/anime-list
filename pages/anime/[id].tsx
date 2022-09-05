@@ -21,7 +21,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
     const results = await loadAnime((context.params?.id as string) || '1');
 
-    if (results?.error) {
+    if (results?.error || results?.status === 404) {
         return {
             notFound: true,
         };
