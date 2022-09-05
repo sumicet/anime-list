@@ -1,6 +1,6 @@
 import { SimpleGrid, VStack } from '@chakra-ui/layout';
 import Head from 'next/head';
-import { Anime, Pagination as PaginationType } from '../../store';
+import { Anime, Pagination as PaginationType } from '../../types';
 import { AnimeCard, Pagination } from '../../components';
 import { HomeSkeleton } from './HomeSkeleton';
 

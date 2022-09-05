@@ -13,7 +13,7 @@ export function GoBack() {
     // If it is => router.back()
     // Else => router.push('home/1')
     const handleGoBack = () => {
-        router.push('home/1');
+        router.push('/home/1');
     };
     return (
         <HStack

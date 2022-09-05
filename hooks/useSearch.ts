@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import useSWR from 'swr';
-import { Anime, Pagination } from '../store';
+import { Anime, Pagination } from '../types';
 import { useDebounce } from './useDebounce';
 
 export type Input = string | null;

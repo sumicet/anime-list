@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next';
 import { loadAnime, loadAllAnime } from '../../lib';
-import { Anime as AnimeType } from '../../store';
+import { Anime as AnimeType } from '../../types';
 import { Anime as AnimeView } from '../../views/Anime';
 
 function Anime(props: { data: AnimeType }) {

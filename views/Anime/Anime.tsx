@@ -2,7 +2,7 @@ import { Box, Flex, HStack, Stack, Text, VStack } from '@chakra-ui/layout';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useColorModeValue } from '@chakra-ui/color-mode';
-import { Anime as AnimeType } from '../../store';
+import { Anime as AnimeType } from '../../types';
 import { Icon, Metadata, Statistics } from '../../components';
 import { GoBack } from './GoBack';
 import { AnimeSkeleton } from './AnimeSkeleton';

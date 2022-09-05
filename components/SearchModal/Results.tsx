@@ -3,7 +3,7 @@ import { useColorModeValue } from '@chakra-ui/color-mode';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { Spinner } from '@chakra-ui/spinner';
-import { Anime } from '../../store';
+import { Anime } from '../../types';
 import { Input } from '../../hooks';
 import { Icon } from '../Icons';
 
