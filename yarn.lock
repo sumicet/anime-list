@@ -348,7 +348,7 @@
     "@chakra-ui/react-context" "2.0.3"
     "@chakra-ui/shared-utils" "2.0.1"
 
-"@chakra-ui/media-query@^3.2.5":
+"@chakra-ui/media-query@^3.2.5", "@chakra-ui/media-query@3.2.5":
   "integrity" "sha512-V+Dngi/r7u/uj7JhsZerM1RI597Oo4wED2ojNfclnnEVb/IoqktiuFy6RQgbo3HmE7M/E5B1i4yYzt7tQJhXlg=="
   "resolved" "https://registry.npmjs.org/@chakra-ui/media-query/-/media-query-3.2.5.tgz"
   "version" "3.2.5"
@@ -420,6 +420,11 @@
   "resolved" "https://registry.npmjs.org/@chakra-ui/react-use-merge-refs/-/react-use-merge-refs-2.0.3.tgz"
   "version" "2.0.3"
 
+"@chakra-ui/react-use-previous@2.0.1":
+  "integrity" "sha512-ROi+/puVd8D1QaxBSOcGlJNqV2x02ppSgmXzZZJhM8ryFLZjY9ojV3HhamB2IJ/7SIb1rMSSV1GPedFw7YMCwA=="
+  "resolved" "https://registry.npmjs.org/@chakra-ui/react-use-previous/-/react-use-previous-2.0.1.tgz"
+  "version" "2.0.1"
+
 "@chakra-ui/react-use-safe-layout-effect@2.0.1":
   "integrity" "sha512-H+ZOjkPqv3KBPEoP68JKpQBNdLOI0mwzEiTT397UdvBVCCJ+1/ijWVUT+Ub/pYic60O6xUghy5ORaWqJHhnKDA=="
   "resolved" "https://registry.npmjs.org/@chakra-ui/react-use-safe-layout-effect/-/react-use-safe-layout-effect-2.0.1.tgz"
@@ -437,12 +442,20 @@
   "resolved" "https://registry.npmjs.org/@chakra-ui/shared-utils/-/shared-utils-2.0.1.tgz"
   "version" "2.0.1"
 
+"@chakra-ui/skeleton@^2.0.15":
+  "integrity" "sha512-QVMkXwrH9jLfim8uJTZcjHeGjzoquNcHGXD5wapd7eDqp9BygvmMXAHBxFm8eEJLHuvIqLX94P6DLeiieYwX7Q=="
+  "resolved" "https://registry.npmjs.org/@chakra-ui/skeleton/-/skeleton-2.0.15.tgz"
+  "version" "2.0.15"
+  dependencies:
+    "@chakra-ui/media-query" "3.2.5"
+    "@chakra-ui/react-use-previous" "2.0.1"
+
 "@chakra-ui/spinner@^2.0.9", "@chakra-ui/spinner@2.0.9":
   "integrity" "sha512-9ALl51fiVWptDu2J2xcv0TSfGf4buumpHrEXHvV2Qy+HZ6rYnUmSThBSb/VgoQS+rASG8bAbLUPlQTQ+v9ibFg=="
   "resolved" "https://registry.npmjs.org/@chakra-ui/spinner/-/spinner-2.0.9.tgz"
   "version" "2.0.9"
 
-"@chakra-ui/styled-system@>=2.0.0", "@chakra-ui/styled-system@2.3.1":
+"@chakra-ui/styled-system@^2.3.1", "@chakra-ui/styled-system@>=2.0.0", "@chakra-ui/styled-system@2.3.1":
   "integrity" "sha512-jyR9s2yk5TEyq4HUfjrgUeaOzd9ZTZrbjK96UjtiTCZGO/q4j2RXtYvfheUjUyW1UnzI2A1ffHOJca8tBMDjpA=="
   "resolved" "https://registry.npmjs.org/@chakra-ui/styled-system/-/styled-system-2.3.1.tgz"
   "version" "2.3.1"

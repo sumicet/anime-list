@@ -11,8 +11,6 @@ import { config } from '../config';
  * @returns A list of top anime
  */
 export async function loadAllAnime(page: string | number, limit?: string | number) {
-    const response = await fetch(
-        `${config.animeUri}/top/anime?limit=${limit || 21}${page ? `&page=${page}` : ''}`
-    );
+    const response = await fetch(`${config.animeUri}/top/anime?limit=${limit || 21}&page=${page}`);
     return response.json();
 }
