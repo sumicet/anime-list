@@ -3,7 +3,6 @@ import { loadAllAnime } from '../../lib';
 import { Home as HomeView, HomeProps } from '../../views/Home';
 
 function Home(props: HomeProps) {
-    console.log(props);
     return <HomeView {...props} />;
 }
 

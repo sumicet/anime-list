@@ -1,3 +1,9 @@
+# Important
+
+The api used is (rate limited)[https://jikan.docs.apiary.io/#introduction/information/rate-limiting]. Because of this, the first request to home/page
+will always throw an error. To me it didn't seem right to show the error screen
+in this case. A refresh will fetch the data.
+
 # Tools
 
 -   [`OpenApi TypeScript Code Generator`](https://www.npmjs.com/package/openapi-typescript-codegen)

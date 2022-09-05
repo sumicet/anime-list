@@ -3,14 +3,18 @@ import Head from 'next/head';
 import { Anime, Pagination as PaginationType } from '../../types';
 import { AnimeCard, Pagination } from '../../components';
 import { HomeSkeleton } from './HomeSkeleton';
+import { useRateLimitToast } from '../../hooks';
 
 export interface HomeProps {
-    data: Anime[];
-    pagination: PaginationType;
+    data?: Anime[];
+    pagination?: PaginationType;
+    status?: string;
 }
 
 export function Home(props: HomeProps) {
-    const { data, pagination } = props;
+    const { data, pagination, status } = props;
+
+    useRateLimitToast(status);
 
     if (!data) {
         return <HomeSkeleton />;

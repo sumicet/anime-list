@@ -6,10 +6,18 @@ import { Anime as AnimeType } from '../../types';
 import { Icon, Metadata, Statistics } from '../../components';
 import { GoBack } from './GoBack';
 import { AnimeSkeleton } from './AnimeSkeleton';
+import { useRateLimitToast } from '../../hooks';
 
-export function Anime({ data }: { data: AnimeType }) {
+export interface AnimeProps {
+    data?: AnimeType;
+    status?: string;
+}
+
+export function Anime({ data, status }: AnimeProps) {
     const textColor = useColorModeValue('text.primary.light', 'text.primary.dark');
     const bgColor = useColorModeValue('main.light', 'main.dark');
+
+    useRateLimitToast(status);
 
     if (!data) {
         return <AnimeSkeleton />;

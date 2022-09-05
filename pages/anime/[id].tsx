@@ -1,9 +1,9 @@
 import { GetStaticProps } from 'next';
 import { loadAnime, loadAllAnime } from '../../lib';
 import { Anime as AnimeType } from '../../types';
-import { Anime as AnimeView } from '../../views/Anime';
+import { Anime as AnimeView, AnimeProps } from '../../views/Anime';
 
-function Anime(props: { data: AnimeType }) {
+function Anime(props: AnimeProps) {
     return <AnimeView {...props} />;
 }
 
