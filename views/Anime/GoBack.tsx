@@ -15,6 +15,7 @@ export function GoBack() {
     const handleGoBack = () => {
         router.push('/home/1');
     };
+
     return (
         <HStack
             spacing="space4"

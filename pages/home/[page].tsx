@@ -19,7 +19,7 @@ export const getStaticPaths = async () => {
 
 // The api is rate limited to 3 requests per second
 export const getStaticProps: GetStaticProps = async (context) => {
-    const results = await loadAllAnime((context.params?.page as string) || '1');
+    const results = await loadAllAnime(context.params?.page as string);
 
     const pagination = results?.pagination;
 
@@ -38,6 +38,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     return {
         props: {
             ...results,
+            context: JSON.stringify(context),
         },
         revalidate: 6000,
     };

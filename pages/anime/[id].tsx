@@ -19,7 +19,7 @@ export const getStaticPaths = async () => {
 
 // Because the api is rate limited, not all pages will be rendered at build time
 export const getStaticProps: GetStaticProps = async (context) => {
-    const results = await loadAnime((context.params?.id as string) || '1');
+    const results = await loadAnime(context.params?.id as string);
 
     if (results?.error || results?.status === 404) {
         return {
