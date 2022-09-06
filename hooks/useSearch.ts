@@ -21,7 +21,7 @@ export function useSearch() {
 
     const results = useSWR<{ data: Anime[]; pagination: Pagination }>(query, () => fetcher(query));
     const { data, error } = results;
-    // Too bad swr doesn't provide an isLoading prop
+    // Too bad swr doesn't provide an `isLoading` prop
     const isLoading = !error && !data;
 
     const setDebouncedQuery = useDebounce(setQuery, 300);

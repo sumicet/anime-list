@@ -13,7 +13,7 @@ in this case, so I displayed a toast.
     modular. It makes it easy to work with responsive styles. It provides dark/white
     theme support.
 
--   [SWR](https://swr.vercel.app/) because it's faster to setup & the bundle
+-   [`SWR`](https://swr.vercel.app/) because it's faster to setup & the bundle
     size is smaller compared to alternatives like React Query. Don't need any complex configurations for the data fetching so this package is good for small projects. 
 
 -   `Eslint` & `Prettier` + `Husky`
@@ -30,3 +30,8 @@ in this case, so I displayed a toast.
     used it in both cases eg `rgba(235, 235, 235, 1)` and `rgba(238, 238, 238, 1)`.
     Similarly, the spacing system appears to be using a lot of different values
     so I tried to make it consistent as much as possible.
+
+-   There's no verified field so I used `approved` for the checkmark
+
+-   I wanted to add placeholders for images but that's a bit overkill for this
+    project. :D

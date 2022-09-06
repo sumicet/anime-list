@@ -6,6 +6,18 @@ import { theme } from '../theme';
 import { Layout } from '../components';
 import 'react-toastify/dist/ReactToastify.css';
 
+// Only configured the toast to show "warnings"
+// Didn't use the default toast.warn style because this was faster to style
+const toastStyle = {
+    padding: 10,
+    background: '#ffd952',
+    fontFamily: 'Inter',
+    borderRadius: '10px',
+    fontSize: '16px',
+    lineHeight: '19px',
+    color: 'black',
+};
+
 function Wrapper({ Component, pageProps }: AppProps) {
     return (
         <>
@@ -13,22 +25,14 @@ function Wrapper({ Component, pageProps }: AppProps) {
                 position="bottom-right"
                 autoClose={6000}
                 hideProgressBar
-                newestOnTop={false}
+                newestOnTop
                 closeOnClick
                 rtl={false}
                 pauseOnFocusLoss
                 draggable
                 pauseOnHover
                 theme="light"
-                toastStyle={{
-                    padding: 10,
-                    background: '#ffd952',
-                    fontFamily: 'Inter',
-                    borderRadius: '10px',
-                    fontSize: '16px',
-                    lineHeight: '19px',
-                    color: 'black',
-                }}
+                toastStyle={toastStyle}
             />
             <Layout>
                 <Component {...pageProps} />

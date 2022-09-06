@@ -24,7 +24,7 @@ export function Anime({ data, status }: AnimeProps) {
     }
 
     // @ts-ignore The type for `titles` is wrong
-    const title = data.titles?.[0]?.title;
+    const title: string | null | undefined = data.titles?.[0]?.title;
 
     return (
         <>
@@ -33,7 +33,11 @@ export function Anime({ data, status }: AnimeProps) {
                 <meta name="description" content={data?.synopsis || undefined} />
             </Head>
             <GoBack />
-            <VStack spacing="space35" width="100%" alignItems="flex-start">
+            <VStack
+                spacing={{ base: 'space24', sm: 'space35' }}
+                width="100%"
+                alignItems="flex-start"
+            >
                 <Stack direction={{ base: 'column', sm: 'row' }} spacing="space20" width="100%">
                     <Box
                         height={330}
@@ -46,8 +50,7 @@ export function Anime({ data, status }: AnimeProps) {
                             src={data.images?.webp?.large_image_url || ''}
                             layout="fill"
                             objectFit="cover"
-                            // @ts-ignore The type for `titles` is wrong
-                            alt={title}
+                            alt={title || 'anime'}
                         />
                     </Box>
                     <Stack
@@ -59,27 +62,32 @@ export function Anime({ data, status }: AnimeProps) {
                     >
                         <HStack spacing="space10" width="100%">
                             <Text variant="large700" color={textColor} noOfLines={1}>
-                                {title}
+                                {title || 'N/A'}
                             </Text>
-                            <Icon name="verified" color={bgColor} boxSize="space24" />
+                            {data.approved && (
+                                <Icon name="verified" color={bgColor} boxSize="space24" />
+                            )}
                         </HStack>
                         <VStack spacing="space24" width="100%">
-                            <Metadata label="Type" value={data.type || 'Unknown'} />
-                            <Metadata label="Source" value={data.source || 'Unknown'} />
-                            <Metadata label="Episodes" value={data.episodes || 'Unknown'} />
-                            <Metadata label="Status" value={data.status || 'Unknown'} />
+                            <Metadata label="Type" value={data.type || 'N/A'} />
+                            <Metadata label="Source" value={data.source || 'N/A'} />
+                            <Metadata label="Episodes" value={data.episodes || 'N/A'} />
+                            <Metadata label="Status" value={data.status || 'N/A'} />
                         </VStack>
-                        <Flex justifyContent="space-between">
-                            <Statistics label="Score" value={data.score || 'Unknown'} />
-                            <Statistics label="Rank" value={data.rank || 'Unknown'} />
-                            <Statistics label="Popularity" value={data.popularity || 'Unknown'} />
+                        <Flex
+                            justifyContent="space-between"
+                            paddingTop={{ base: 'space16', sm: '0px' }}
+                        >
+                            <Statistics label="Score" value={data.score || 'N/A'} />
+                            <Statistics label="Rank" value={data.rank || 'N/A'} />
+                            <Statistics label="Popularity" value={data.popularity || 'N/A'} />
                         </Flex>
                     </Stack>
                 </Stack>
                 <Text variant="body600" color={textColor}>
                     Description
                 </Text>
-                <Text variant="small500">{data.synopsis}</Text>
+                <Text variant="small500">{data.synopsis || 'N/A'}</Text>
             </VStack>
         </>
     );

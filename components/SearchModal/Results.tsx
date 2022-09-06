@@ -79,12 +79,13 @@ export function Results({
             borderRadius="radius30"
             cursor="pointer"
         >
-            {data.map((anime) => {
-                // @ts-ignore The type for `titles` is wrong
-                const title = anime.titles?.[0]?.title;
+            {data.map((anime, index) => {
+                // @ts-ignore The generated type for `titles` is wrong
+                const title: string | null | undefined = anime.titles?.[0]?.title;
 
                 return (
                     <HStack
+                        key={anime.mal_id || `${index + 1}`}
                         spacing="space16"
                         borderRadius="radius10"
                         padding="space12"
@@ -110,14 +111,12 @@ export function Results({
                                 src={anime.images?.webp?.large_image_url || ''}
                                 layout="fill"
                                 objectFit="cover"
-                                // @ts-ignore The type for `titles` is wrong
-                                alt={title}
+                                alt={title || 'anime'}
                             />
                         </Box>
                         <VStack spacing={0} alignItems="flex-start" width="100%">
                             <Text variant="body500" color={titleColor} noOfLines={1}>
-                                {/* @ts-ignore The type for `titles` is wrong */}
-                                {title}
+                                {title || 'N/A'}
                             </Text>
                             <Text variant="small500" color={fadedColor}>
                                 {anime.type} ·{' '}

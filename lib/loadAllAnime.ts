@@ -5,6 +5,9 @@ import { config } from '../config';
 // returns pairs of anime that are similar to each other. I doubt this is what
 // was needed for this app
 
+// The generated types are all over the place so I thought it was better to not
+// waste time on trying to add a return type
+
 /**
  * @param page
  * @param limit

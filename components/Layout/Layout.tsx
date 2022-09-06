@@ -9,7 +9,7 @@ export function Layout({ children }: { children: ReactNode }) {
     const bgColor = useColorModeValue('main.light', 'main.dark');
     return (
         <VStack
-            spacing="space40"
+            spacing={{ base: 'space20', sm: 'space40' }}
             bgColor={bgColor}
             width="100%"
             alignItems="flex-start"

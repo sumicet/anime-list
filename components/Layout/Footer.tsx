@@ -16,7 +16,6 @@ export function Footer() {
             <Divider orientation="horizontal" height={1} bgColor={dividerColor} width="100%" />
             <CenterContainer height="fit-content" paddingY="space24">
                 <Flex justifyContent="space-between">
-                    {' '}
                     <VStack spacing="space10" width="100%" alignItems="flex-start">
                         <Text variant="body600" color={mainColor}>
                             Made by Cristina Mihailescu
@@ -25,7 +24,7 @@ export function Footer() {
                             Twitter.
                         </Text>
                         <Text variant="extraSmall500" color={fadedTextColor}>
-                            404. Spacing system + color palette not found.
+                            404. Spacing system + color palette not found. :D
                         </Text>
                     </VStack>
                     <Button onClick={handleScroll}>

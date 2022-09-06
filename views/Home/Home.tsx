@@ -32,13 +32,13 @@ export function Home(props: HomeProps) {
                     spacing="space50"
                     width="100%"
                 >
-                    {data?.map((anime) => (
+                    {data?.map((anime, index) => (
                         <AnimeCard
                             key={anime.mal_id}
-                            id={anime.mal_id || ''}
+                            id={anime.mal_id || `${index + 1}`}
                             image={anime.images?.webp?.large_image_url || ''}
-                            // @ts-ignore The type for `titles` is wrong
-                            title={anime.titles?.[0]?.title || 'Unknown'}
+                            // @ts-ignore The generated type for `titles` is wrong
+                            title={anime.titles?.[0]?.title || 'N/A'}
                         />
                     ))}
                 </SimpleGrid>

@@ -18,18 +18,19 @@ export const getStaticPaths = async () => {
 };
 
 // The api is rate limited to 3 requests per second
+// This will cause some issues, see `README.md`
 export const getStaticProps: GetStaticProps = async (context) => {
     const results = await loadAllAnime(context.params?.page as string);
 
     const pagination = results?.pagination;
 
+    const pageBeyondMax =
+        pagination?.current_page &&
+        pagination?.last_visible_page &&
+        pagination.current_page > pagination?.last_visible_page;
+
     // It sometimes doesn't return an `error` field
-    if (
-        results?.error ||
-        (pagination?.current_page &&
-            pagination?.last_visible_page &&
-            pagination.current_page > pagination?.last_visible_page)
-    ) {
+    if (results?.error || pageBeyondMax) {
         return {
             notFound: true,
         };

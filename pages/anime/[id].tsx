@@ -9,6 +9,7 @@ function Anime(props: AnimeProps) {
 
 export const getStaticPaths = async () => {
     const results = await loadAllAnime(0, 100);
+
     return {
         paths: results?.data?.map((anime: AnimeType) => ({
             params: { id: anime?.mal_id?.toString() },
