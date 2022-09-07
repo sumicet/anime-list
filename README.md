@@ -18,10 +18,6 @@ in this case, so I displayed a toast.
 
 -   `Eslint` & `Prettier` + `Husky`
 
-# Additions
-
--   Dark theme
-
 # Notes
 
 -   I wanted to add placeholders for images but that's a bit overkill for this
